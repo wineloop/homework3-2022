@@ -82,6 +82,7 @@ nav a{
 nav a:hover{
   text-decoration: underline;
   text-decoration-style: wavy;
+  
 }
 
 
@@ -101,6 +102,7 @@ a.skip{
 /* Requirement 4 code here*/
 nav a:focus{
   border-top: 2px solid yellow;
+  outline: none;
 }
 
 
@@ -120,12 +122,12 @@ nav a:focus{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  background-color: #DDDDDD;
+  background-color: #858585;
   
 }
 
 .about, .clients, .method, .contact {
-  grid-column: 2 / 3;
+  grid-column: 2;
 }
 
 img {
@@ -133,7 +135,7 @@ img {
 }
 
 .about-image, .clients-image, .method-image, .contact-image {
-  grid-column: 1 / span 3;
+  grid-column: 1 / -1;
   max-height: 500px;
   overflow: hidden;
 }
@@ -155,9 +157,10 @@ img {
 }
 
 .text {
-  text-align: center;
+  align-self:center;
   max-height: 25vh;
   overflow: scroll;
+  
 }
 @media screen and (min-width: 700px){
   nav{
@@ -177,6 +180,12 @@ img {
   .container {
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
+  }
+
+  a.skip:focus {
+    text-align: left;
+    position: relative;
+    bottom: 20px;
   }
 
   .about, .method, .clients-image, .contact-image {
